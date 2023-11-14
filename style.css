@@ -2,6 +2,7 @@
     --gray: #d6dee7;
     --blue: #0ea5e9;
     --light-blue: #87c0db;
+    --accent:rgb(226,120,56);
 }
 
 
@@ -16,6 +17,7 @@ html,body,.main {
 button {
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .main {
@@ -108,13 +110,6 @@ button {
     width: 100px;
 }
 
-.content {
-    background-color: var(--gray);
-    width: 100%;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
 .top-left, .top-right {
     gap: 1vw;
 }
@@ -159,4 +154,113 @@ button {
 
 .hi-there p:last-of-type {
     font-size: 1.3rem;
+}
+
+button:hover {
+    background-color: var(--accent);
+    transition: 0.4s;
+}
+
+.project-icon, .header-icon, .icon, .main-icon {
+    cursor: pointer;
+}
+
+.content {
+    background-color: var(--gray);
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    padding: 30px 20px;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.projects, .announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.your_projects, .your_announcements {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 4vh;
+}
+
+.project {
+    background-color: white;
+    text-wrap: wrap;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+    gap: 3vh;
+    border-left: 0.5vw var(--accent) solid;
+    border-radius: 8px;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+
+.project-icon {
+    height: 20px;
+}
+
+.heading, .subtext, .icons {
+    margin: 0;
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.small-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.subtext {
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+.small-subtext {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.announcements-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: min-content;
+    width: 20vw;
+    border-radius: 8px;
+    padding: 3vh 2vh;
+    gap: 1vh;
+}
+
+.announcement {
+    padding: 2vh;
+}
+
+#first-announcement, #second-announcement {
+    border-bottom: var(--gray) 1px solid;
+}
+
+.project, .announcements-container {
+    box-shadow: 3px 3px 3px rgb(0,0,0,0.1);
 }
